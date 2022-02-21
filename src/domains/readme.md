@@ -14,6 +14,8 @@ domains
 │   ├── schemas // when using mongo
 │   │   ├── [domain].schema.ts
 │   │   └── ...
+│   │   [domain].service.ts
+│   │   [domain].service.spec.ts
 │   └── [domain].module.ts
 └── ...
 ```
