@@ -12,4 +12,7 @@ export default registerAs('database', () => ({
     database: process.env.DB_DATABASE || 'database',
     synchronize: new Boolean(process.env.DB_SYNCHRONIZE || 'true'),
   },
+  mongo: {
+    url: process.env.MONGO_URI || 'mongodb://localhost:27017/mongo',
+  },
 }));
