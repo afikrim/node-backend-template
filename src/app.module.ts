@@ -16,6 +16,8 @@ import { LoggerMiddleware } from './infrastructure/http/middlewares/logger.middl
       load: [app, cache, database, http, vendor],
       envFilePath: ['.env.local', '.env'],
     }),
+    // add typeorm when using rdb
+    // add mongo when using mongo
     DatabaseModule,
   ],
   controllers: [AppController],
