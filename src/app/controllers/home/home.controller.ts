@@ -1,10 +1,10 @@
 import { Controller, Get, HttpStatus, Res } from '@nestjs/common';
 import { Response } from 'express';
-import { AppService } from 'src/domains/app/app.service';
+import { HomeService } from 'src/domains/home/home.service';
 
 @Controller()
-export class AppController {
-  constructor(private readonly appService: AppService) {}
+export class HomeController {
+  constructor(private readonly homeService: HomeService) {}
 
   @Get()
   getHello(@Res() response: Response) {
@@ -14,7 +14,7 @@ export class AppController {
         status: 'success',
         message: 'Hello!',
         data: {
-          app: this.appService.getHello(),
+          app: this.homeService.getHello(),
         },
       })
       .end();
