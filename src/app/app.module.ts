@@ -6,9 +6,8 @@ import cache from 'src/config/cache';
 import database from 'src/config/database';
 import http from 'src/config/http';
 import vendor from 'src/config/vendor';
-import { AppService } from 'src/domains/app/app.service';
+import { HomeModule } from 'src/domains/home/home.module';
 import { DatabaseModule } from 'src/infrastructure/database/database.module';
-import { AppController } from './controllers/app/app.controller';
 
 @Module({
   imports: [
@@ -19,9 +18,8 @@ import { AppController } from './controllers/app/app.controller';
     // add typeorm when using rdb
     // add mongo when using mongo
     DatabaseModule,
+    HomeModule,
   ],
-  controllers: [AppController],
-  providers: [AppService],
 })
 export class AppModule implements NestModule {
   configure(consumer: MiddlewareConsumer) {
