@@ -5,8 +5,9 @@ Structure from this folder will looks like this,
 ```plaintext
 app
 ├── controllers
-│   ├── [domain].controller.ts
-│   ├── [domain].controller.spec.ts
+│   ├── [domain]
+│   │   ├── [domain].controller.ts
+│   │   └── [domain].controller.spec.ts
 │   └── ...
 ├── guards
 │   ├── [name].guard.ts
